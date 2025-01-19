@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UPP | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/assets/css/style.css">
+  <link rel="stylesheet" href="src/assets/css/aos.css">
+  <link rel="icon" type="image/x-icon" href="src/assets/img/logo.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="src/assets/img/logo-removebg-preview.png" alt="Logo" class="me-2" style="height: 50px;">
+      <span>UPP Alarmes</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Serviços
+          </a>
+          <ul class="dropdown-menu" style="font-size: 1.5rem;">
+            <li><a class="dropdown-item" href="#cerca">Cerca Elétrica</a></li>
+            <li><a class="dropdown-item" href="#monitoramento">Monitoramento 24H</a></li>
+            <li><a class="dropdown-item" href="#cftv">Sistema de CFTV</a></li>
+            <li><a class="dropdown-item" href="#portao">Motor para portão</a></li>
+            <li><a class="dropdown-item" href="#interfonia">Interfonia e fechaduras</a></li>
+            <li><a class="dropdown-item" href="#ronda">Ronda Noturna</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#manutencao">Manutenção</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#orcamento">Orçamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="src/pages/segurança.html">Dicas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contato">Contato</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" onsubmit="return pesquisar(event)">
+        <input class="form-control me-2" type="search" id="termoPesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="container text-center">
+    <h1 class="hero-title">UPP</h1>
+    <p class="hero-subtitle">Especialistas em segurança patrimonial e monitoramento 24/7.</p>
+    <a href="#servicos" class="hero-button">Nossos Serviços</a>
+  </div>
+</div>
+<!-- Services Section -->
+<div id="servicos" class="services py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">O Que Oferecemos?</h2>
+    <br>
+    <br>
+    <br>
+    <div class="row text-center">
+      <!-- Card 1 -->
+      <div class="col-md-4 col-sm-6" data-aos="fade-down">
+        <div class="card border-0">
+          <i class="fas fa-thumbs-up fa-3x text-primary mb-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Maior Índice de Aprovação</h5>
+            <p class="card-text">Temos um índice muito grande de aprovação de clientes satisfeitos com nossos serviços.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 col-sm-6" data-aos="fade-down">
+        <div class="card border-0">
+          <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Seriedade e Segurança</h5>
+            <p class="card-text">Cumprimos nossa missão de proteger você com equipamentos de alta tecnologia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 col-sm-6" data-aos="fade-down">
+        <div class="card border-0">
+          <i class="fas fa-laptop-code fa-3x text-warning mb-3"></i>
+          <div class="card-body">
+            <h5 class="card-title">Tecnologia e Eficiência</h5>
+            <p class="card-text">Trabalhamos com tecnologia de ponta para garantir a melhor experiência ao cliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Produtos de Qualidade</h4>
+        <p>Trabalhamos com centrais nacionais de alta qualidade, garantindo segurança e eficiência.</p>
+      </div>
+      
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/intelbras.png" alt="Imagem de Central de Alarmes" class="img-fluid" style="width: 100%;">
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center" id="cameras">
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/camera01.jpg" alt="Ícone Alarme" class="img-fluid" style="width: 100%;">
+      </div>
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Sistema de Câmeras Eficiênte</h4>
+        <p>Monitore seu imóvel 24h com nossa equipe altamente treinada. Consulte nossos vendedores!</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Sobre os Alarmes</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center" id="monitoramento">
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Segurança com Monitoramento Remoto</h4>
+        <p data-aos="fade-down">Oferecemos soluções completas para monitoramento remoto de segurança com tecnologia de ponta.</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Mais sobre Monitoramento</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+      
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/drone.jpg" alt="Monitoramento Remoto" class="img-fluid" style="width: 100%;">
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center" id="cerca">
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/eletric.jpg" alt="Cerca Elétrica" class="img-fluid" style="width: 100%;">
+      </div>
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Cerca Elétrica de Alta Voltagem</h4>
+        <p>Cercas elétricas de alta qualidade com voltagem controlada, garantindo máxima segurança e proteção para seu imóvel.</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Mais sobre Cercas Elétricas</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center" id="monitoramento">
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Fechaduras Digitais e Interfones</h4>
+        <p>Oferecemos soluções modernas em fechaduras digitais com biometria e interfones com vídeo para maior segurança e praticidade no seu dia a dia. Instalação profissional e garantia de qualidade.</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Mais sobre Fechaduras</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+      
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/interfone.jpg" alt="Fechadura Digital e Interfone" class="img-fluid" style="width: 100%;">
+      </div>
+    </div>
+
+    <hr class="my-5">
+    <br>
+    <br>
+    <br>
+    <div class="row align-items-center" id="portao">
+      <!-- Image Content -->
+      <div class="col-md-6 text-center">
+        <img src="src/assets/img/portao.jpg" alt="Portão Automático" class="img-fluid" style="width: 100%;">
+      </div>
+      <!-- Text Content -->
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Automação de Portões</h4>
+        <p>Oferecemos soluções completas em automação de portões, controles remotos e sistemas de segurança integrados.</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Mais sobre Automação</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="src/assets/img/cam1.webp" alt="Alarme" class="img-fluid rounded" style="width: 100%;">
+      </div>
+      <div class="col-md-6" data-aos="fade-down">
+        <h4>Sistemas de alarme</h4>
+        <p>Segurança profissional para sua casa ou empresa com a UPP Alarmes. Soluções modernas e monitoramento 24h.</p>
+        <div>
+          <a href="#" class="btn btn-primary me-2">Fale com a UPP</a>
+          <a href="#" class="btn btn-outline-primary">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer id="contato" class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Sobre Nós</h5>
+          <p>A UPP Alarmes é especializada em soluções de segurança e monitoramento de alta qualidade para residências e empresas.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Contato</h5>
+          <p><i class="bi bi-telephone-fill"></i> (13) 3427-9491</p>
+          <p><i class="bi bi-whatsapp"></i> (13) 99661-9441</p>
+          <p><i class="bi bi-geo-alt-fill"></i> São Paulo/SP</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="mb-3">Redes Sociais</h5>
+          <a href="facebook.com/uppalarmesmonitoramento/" class="text-light me-3"><i class="bi bi-facebook fs-4"></i> Facebook</a><br>
+          <a href="https://www.instagram.com/upp_alarmes/" class="text-light me-3"><i class="bi bi-instagram fs-4"></i> Instagram</a><br>
+          <a href="#" class="text-light me-3"><i class="bi bi-linkedin fs-4"></i> LinkedIn</a><br>
+          <a href="https://wa.me/5513996619441" class="text-light"><i class="bi bi-whatsapp fs-4"></i> WhatsApp</a>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 UPP Alarmes. Todos os direitos reservados.</p>
+          <p>Desenvolvido por <a href="https://github.com/EduardoDosSantosFerreira" target="_blank" class="text-warning">Eduardo Dos Santos Ferreira</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="src/assets/js/aos.js"></script>
+  <script>
+    function pesquisar(event) {
+      event.preventDefault();
+      const termo = document.getElementById('termoPesquisa').value.toLowerCase();
+      
+      const mapeamento = {
+        'camera': '#cameras',
+        'câmera': '#cameras',
+        'cameras': '#cameras',
+        'câmeras': '#cameras',
+        'monitoramento': '#monitoramento',
+        'cerca': '#cerca',
+        'cerca elétrica': '#cerca',
+        'cerca eletrica': '#cerca'
+      };
+
+      if (mapeamento[termo]) {
+        document.querySelector(mapeamento[termo]).scrollIntoView({ behavior: 'smooth' });
+        return false;
+      } else {
+        alert('Termo não encontrado. Tente pesquisar por: câmeras, monitoramento ou cerca elétrica');
+      }
+      return false;
+    }
+  </script>
+      <script>
+        // Inicialização da animação AOS
+        AOS.init({
+          duration: 2000,
+        });
+      </script>
+</body>
+</html>
