@@ -69,15 +69,18 @@
 </div>
 
 <style>
-/* Estilo da hero section com imagem de fundo e efeito parallax */
+/* Estilo da hero section */
 .hero {
   position: relative;
   height: 100vh; /* Altura total da seção */
   background: url('/src/assets/img/equipe.png') no-repeat center center/cover;
+  background-position: center top; /* Posição inicial do fundo */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white; /* Cor do texto contrastando com a imagem */
+  overflow: hidden;
+  will-change: background-position; /* Otimização para transições suaves */
 }
 
 .hero-overlay {
@@ -95,18 +98,18 @@
 }
 
 .hero-title {
-  font-size: 5rem; /* Aumentado de 3rem */
+  font-size: 5rem;
   font-weight: bold;
 }
 
 .hero-subtitle {
   margin-bottom: 20px;
-  font-size: 2.5rem; /* Aumentado de 1.5rem */
+  font-size: 2.5rem;
 }
 
 .hero-button {
-  padding: 15px 30px; /* Aumentado o padding */
-  font-size: 1.8rem; /* Aumentado de 1rem */
+  padding: 15px 30px;
+  font-size: 1.8rem;
   background-color: #bb9f00;
   color: white;
   text-decoration: none;
@@ -118,6 +121,21 @@
   background-color: #ffb700;
 }
 </style>
+
+<script>
+// Função para atualizar o efeito parallax
+function updateParallax() {
+  const scrollPosition = window.scrollY;
+  const hero = document.querySelector(".hero");
+  hero.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;
+}
+
+// Aplicar o efeito parallax imediatamente e durante a rolagem
+document.addEventListener("DOMContentLoaded", () => {
+  updateParallax(); // Atualiza imediatamente após carregar a página
+  window.addEventListener("scroll", updateParallax); // Atualiza durante a rolagem
+});
+</script>
 
 
 <!-- Services Section -->
