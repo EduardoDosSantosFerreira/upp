@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - UPP Alarmes</title>
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #f8f9fa;
+            }
+
+            .contact-form {
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 30px;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+
+            .form-title {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 40px;
+                padding: 20px;
+                background-color: #f8f9fa;
+                border-radius: 10px;
+            }
+
+            .contact-icon {
+                font-size: 24px;
+                color: #000000;
+                margin-right: 10px;
+            }
+
+            .social-links {
+                margin-top: 20px;
+            }
+
+            .social-links a {
+                color: #860000;
+                margin: 0 10px;
+                font-size: 24px;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .social-links a:hover {
+                color: #ffb700;
+            }
+
+            .about-section {
+                background-color: #f8f9fa;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+
+            /* Novo estilo para os inputs */
+            .form-control, .form-select {
+                border: 2px solid #000000;
+                padding: 12px;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus, .form-select:focus {
+                border-color: #000000;
+                box-shadow: 0 0 5px rgba(0,0,0,0.3);
+            }
+
+            .form-label {
+                font-weight: 600;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="contact-form">
+                <div class="about-section">
+                    <h3 class="text-center mb-3">Sobre Nós</h3>
+                    <p class="text-center">
+                        A UPP Alarmes é especializada em soluções de segurança e monitoramento de alta qualidade para residências e empresas.
+                    </p>
+                </div>
+
+                <h2 class="form-title">Entre em Contato</h2>
+                <form action="#" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="endereco" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Ex: Rua, Número" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="bairro" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="residencia" class="form-label">Nome/Número da Residência</label>
+                        <input type="text" class="form-control" id="residencia" name="residencia" placeholder="Ex: Casa 1, Apto 202" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="assunto" class="form-label">Assunto</label>
+                        <select class="form-select" id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto</option>
+                            <option value="orcamento">Solicitar Orçamento</option>
+                            <option value="suporte">Suporte Técnico</option>
+                            <option value="comercial">Informações Comerciais</option>
+                            <option value="outros">Outros Assuntos</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" style="background-color: #bb9f00; border-color: #bb9f00;">
+                        Enviar Mensagem
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Outras formas de contato</h3>
+                    <p><i class="bi bi-telephone-fill contact-icon"></i>(13) 3427-9491</p>
+                    <p><i class="bi bi-whatsapp contact-icon"></i>(13) 99661-9441</p>
+                    <p><i class="bi bi-geo-alt-fill contact-icon"></i>São Paulo/SP</p>
+                    
+                    <div class="social-links">
+                        <a href="facebook.com/uppalarmesmonitoramento/" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/upp_alarmes/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/5513996619441" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

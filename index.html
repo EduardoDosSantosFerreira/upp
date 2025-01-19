@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       <!-- Image Content -->
       <div class="col-md-6 text-center">
-        <img src="src/assets/img/intelbras.png" alt="Imagem de Central de Alarmes" class="img-fluid" style="width: 100%;">
+        <img src="src/assets/img/intelbras.png" alt="Imagem de Central de Alarmes" class="img-fluid" style="width: 65%;">
       </div>
     </div>
 
@@ -351,6 +351,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <script src="src/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="src/assets/js/aos.js"></script>
+<script>
+  function pesquisar(event) {
+    event.preventDefault();
+    const termo = document.getElementById('termoPesquisa').value.toLowerCase();
+    
+    const mapeamento = {
+      'camera': '#cameras',
+      'câmera': '#cameras',
+      'cameras': '#cameras',
+      'câmeras': '#cameras',
+      'monitoramento': '#monitoramento',
+      'cerca': '#cerca',
+      'cerca elétrica': '#cerca',
+      'cerca eletrica': '#cerca'
+    };
+
+    if (mapeamento[termo]) {
+      document.querySelector(mapeamento[termo]).scrollIntoView({ behavior: 'smooth' });
+      return false;
+    } else {
+      alert('Termo não encontrado. Tente pesquisar por: câmeras, monitoramento ou cerca elétrica');
+    }
+    return false;
+  }
+</script>
 <script>
   // Inicialização da animação AOS
   AOS.init({
