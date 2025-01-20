@@ -132,8 +132,9 @@
             <div class="contact-form">
                 <div class="about-section">
                     <h3 class="text-center mb-3">Sobre Nós</h3>
-                    <p class="text-center">
+                    <p class="text-center" style="font-size: 1.5rem;">
                         A UPP Alarmes é especializada em soluções de segurança e monitoramento de alta qualidade para residências e empresas.
+                        Informe os seus dados para que entre em contato imediato com a equipe.
                     </p>
                 </div>
 
@@ -173,10 +174,14 @@
                         <label for="assunto" class="form-label">Assunto</label>
                         <select class="form-select" id="assunto" name="assunto" required>
                             <option value="">Selecione um assunto</option>
-                            <option value="orcamento">Solicitar Orçamento</option>
-                            <option value="suporte">Suporte Técnico</option>
-                            <option value="comercial">Informações Comerciais</option>
-                            <option value="outros">Outros Assuntos</option>
+                            <option value="Cerca Elétrica">Cerca Elétrica</option>
+                            <option value="Monitoramento 24H">Monitoramento 24H</option>
+                            <option value="Sistema de CFTV">Sistema de CFTV</option>
+                            <option value="Motor para portão">Motor para portão</option>
+                            <option value="Interfonia e fechaduras">Interfonia e fechaduras</option>
+                            <option value="Ronda Noturna">Ronda Noturna</option>
+                            <option value="Outros Serviços">Outros Serviços</option>
+                            <option value="Manutenção">Manutenção</option>
                         </select>
                     </div>
 
@@ -233,6 +238,32 @@
       duration: 1000,
     });
   </script>
+  
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Coleta os valores dos campos do formulário
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const telefone = document.getElementById("telefone").value;
+        const endereco = document.getElementById("endereco").value;
+        const bairro = document.getElementById("bairro").value;
+        const residencia = document.getElementById("residencia").value;
+        const assunto = document.getElementById("assunto").value;
+        const mensagem = document.getElementById("mensagem").value;
+
+        // Cria a mensagem para o WhatsApp
+        const message = `Meu nome é ${nome}, email ${email}, telefone ${telefone}, endereço ${endereco}, bairro ${bairro}, número residencial ${residencia}, do assunto ${assunto}, mensagem ${mensagem}.`;
+
+        // Codifica a mensagem para usar na URL
+        const whatsappUrl = `https://wa.me/5513996619491?text=${encodeURIComponent(message)}`;
+
+        // Redireciona para o WhatsApp com a mensagem
+        window.location.href = whatsappUrl;
+    });
+</script>
+
   
   </body>
   </html>
