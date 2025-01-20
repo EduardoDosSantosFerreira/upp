@@ -138,7 +138,7 @@ footer a:hover {
 .hero {
   position: relative;
   height: 100vh; /* Altura total da seção */
-  background: url('../img/back.png') no-repeat center center/cover;
+  background: url('../img/equipe.png') no-repeat center center/cover;
   background-position: center top; /* Posição inicial do fundo */
   display: flex;
   align-items: center;
