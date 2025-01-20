@@ -138,7 +138,7 @@ footer a:hover {
 .hero {
   position: relative;
   height: 100vh; /* Altura total da seção */
-  background: url('https://github.com/EduardoDosSantosFerreira/upp/blob/main/src/assets/img/equipe.png?raw=true') no-repeat center center/cover;
+  background: url('https://github.com/EduardoDosSantosFerreira/upp/blob/main/src/assets/img/equipe.png') no-repeat center center/cover;
   background-position: center top; /* Posição inicial do fundo */
   display: flex;
   align-items: center;
