@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="../assets/img/logo.ico">
         <style>
             body {
@@ -142,37 +143,51 @@
                 <h2 class="form-title">Entre em Contato</h2>
                 <form action="#" method="POST">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome Completo</label>
+                        <label for="nome" class="form-label">
+                            <i class="fas fa-user"></i> Nome Completo
+                        </label>
                         <input type="text" class="form-control" id="nome" name="nome" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope"></i> E-mail
+                        </label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
+                        <label for="telefone" class="form-label">
+                            <i class="fas fa-phone"></i> Telefone
+                        </label>
                         <input type="tel" class="form-control" id="telefone" name="telefone" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="endereco" class="form-label">Endereço</label>
+                        <label for="endereco" class="form-label">
+                            <i class="fas fa-map-marker-alt"></i> Endereço
+                        </label>
                         <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Ex: Rua, Número" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="bairro" class="form-label">Bairro</label>
+                        <label for="bairro" class="form-label">
+                            <i class="fas fa-building"></i> Bairro
+                        </label>
                         <input type="text" class="form-control" id="bairro" name="bairro" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="residencia" class="form-label">Nome/Número da Residência</label>
+                        <label for="residencia" class="form-label">
+                            <i class="fas fa-home"></i> Nome/Número da Residência
+                        </label>
                         <input type="text" class="form-control" id="residencia" name="residencia" placeholder="Ex: Casa 1, Apto 202" required>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="assunto" class="form-label">Assunto</label>
+                        <label for="assunto" class="form-label">
+                            <i class="fas fa-list-alt"></i> Assunto
+                        </label>
                         <select class="form-select" id="assunto" name="assunto" required>
                             <option value="">Selecione um assunto</option>
                             <option value="Cerca Elétrica">Cerca Elétrica</option>
@@ -185,16 +200,19 @@
                             <option value="Manutenção">Manutenção</option>
                         </select>
                     </div>
-
+                
                     <div class="mb-3">
-                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <label for="mensagem" class="form-label">
+                            <i class="fas fa-comment-dots"></i> Mensagem
+                        </label>
                         <textarea class="form-control" id="mensagem" name="mensagem" rows="5" required></textarea>
                     </div>
-
+                
                     <button type="submit" class="btn btn-primary w-100" style="background-color: #bb9f00; border-color: #bb9f00;">
-                        Enviar Mensagem
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
                     </button>
                 </form>
+                
 
                 <div class="contact-info">
                     <h3>Outras formas de contato</h3>
