@@ -23,21 +23,19 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse fullscreen-navbar" id="navbarNav">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Serviços
           </a>
           <ul class="dropdown-menu" style="font-size: 1.5rem;">
-            <li><a class="dropdown-item" href="#cerca">Cerca Elétrica</a></li>
-            <li><a class="dropdown-item" href="#monitoramento">Monitoramento 24H</a></li>
-            <li><a class="dropdown-item" href="#cftv">Sistema de CFTV</a></li>
-            <li><a class="dropdown-item" href="#portao">Motor para portão</a></li>
-            <li><a class="dropdown-item" href="#interfonia">Interfonia e fechaduras</a></li>
-            <li><a class="dropdown-item" href="#ronda">Ronda Noturna</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#manutencao">Manutenção</a></li>
+            <li><a class="dropdown-item" href="src/pages/cerca.html">Cerca Elétrica</a></li>
+            <li><a class="dropdown-item" href="src/pages/monitoramento.html">Monitoramento 24H</a></li>
+            <li><a class="dropdown-item" href="src/pages/cftv.html">Sistema de CFTV</a></li>
+            <li><a class="dropdown-item" href="src/pages/portao.html">Motor para portão</a></li>
+            <li><a class="dropdown-item" href="src/pages/interfonia.html">Interfonia e fechaduras</a></li>
+            <li><a class="dropdown-item" href="src/pages/ronda.html">Ronda Noturna</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -47,13 +45,14 @@
           <a class="nav-link" href="src/pages/segurança.html">Dicas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
+          <a class="nav-link" href="src/pages/contato.html">Contato</a>
         </li>
       </ul>
       <form class="d-flex" role="search" onsubmit="return pesquisar(event)">
         <input class="form-control me-2" type="search" id="termoPesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
         <button class="btn btn-outline-light" type="submit">Pesquisar</button>
       </form>
+      <button class="btn-close btn-close-white position-absolute top-0 end-0 m-3" id="closeNavbar" aria-label="Close"></button>
     </div>
   </div>
 </nav>
@@ -67,76 +66,6 @@
     <a href="#servicos" class="hero-button">Nossos Serviços</a>
   </div>
 </div>
-
-<style>
-/* Estilo da hero section */
-.hero {
-  position: relative;
-  height: 100vh; /* Altura total da seção */
-  background: url('/src/assets/img/equipe.png') no-repeat center center/cover;
-  background-position: center top; /* Posição inicial do fundo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Cor do texto contrastando com a imagem */
-  overflow: hidden;
-  will-change: background-position; /* Otimização para transições suaves */
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Escurecimento da imagem */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1; /* Coloca o conteúdo acima do overlay */
-}
-
-.hero-title {
-  font-size: 5rem;
-  font-weight: bold;
-}
-
-.hero-subtitle {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
-}
-
-.hero-button {
-  padding: 15px 30px;
-  font-size: 1.8rem;
-  background-color: #bb9f00;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #ffb700;
-}
-</style>
-
-<script>
-// Função para atualizar o efeito parallax
-function updateParallax() {
-  const scrollPosition = window.scrollY;
-  const hero = document.querySelector(".hero");
-  hero.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;
-}
-
-// Aplicar o efeito parallax imediatamente e durante a rolagem
-document.addEventListener("DOMContentLoaded", () => {
-  updateParallax(); // Atualiza imediatamente após carregar a página
-  window.addEventListener("scroll", updateParallax); // Atualiza durante a rolagem
-});
-</script>
-
 
 <!-- Services Section -->
 <div id="servicos" class="services py-5">
@@ -349,8 +278,11 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 </footer>
 
+<!-- Scripts -->
 <script src="src/assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="src/assets/js/aos.js"></script>
+
+<!-- Pesquisar Navbar -->
 <script>
   function pesquisar(event) {
     event.preventDefault();
@@ -376,11 +308,38 @@ document.addEventListener("DOMContentLoaded", () => {
     return false;
   }
 </script>
+
 <script>
   // Inicialização da animação AOS
   AOS.init({
-    duration: 2000,
+    duration: 1000,
   });
 </script>
+
+<!-- Parallax -->
+<script>
+  // Função para atualizar o efeito parallax
+  function updateParallax() {
+    const scrollPosition = window.scrollY;
+    const hero = document.querySelector(".hero");
+    hero.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;
+  }
+  
+  // Aplicar o efeito parallax imediatamente e durante a rolagem
+  document.addEventListener("DOMContentLoaded", () => {
+    updateParallax(); // Atualiza imediatamente após carregar a página
+    window.addEventListener("scroll", updateParallax); // Atualiza durante a rolagem
+  });
+  </script>
+
+<!-- Close da navbar -->
+<script>
+  document.getElementById("closeNavbar").addEventListener("click", () => {
+  const navbarCollapse = document.querySelector(".fullscreen-navbar");
+  navbarCollapse.classList.remove("show");
+});
+
+</script>
+
 </body>
 </html>

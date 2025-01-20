@@ -1,88 +1,187 @@
+/* Estilos gerais */
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
+
+/* Navbar */
 .navbar-brand {
-    font-weight: 600;
-    font-size: 1.8rem;
-  }
+  font-weight: 600;
+  font-size: 1.8rem;
+}
 
-  .navbar-nav .nav-link {
-    font-size: 1.6rem;
-    padding: 0 15px;  /* Ajuste o espaçamento entre os links */
-    transition: color 0.3s ease;
-  }
+.navbar-nav .nav-link {
+  font-size: 1.6rem;
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
 
-  .navbar-nav .nav-link:hover {
-    color: #ffc107;
-  }
+.navbar-nav .nav-link:hover {
+  color: #ffc107;
+}
 
-  .dropdown-menu {
-    transition: all 0.3s ease;
-  }
+.dropdown-menu {
+  transition: all 0.3s ease;
+}
 
-  .dropdown-menu:hover {
-    display: block;
-  }
+/* Dropdown hover */
+.dropdown-menu:hover {
+  display: block;
+}
 
-  @media (max-width: 576px) {
-    .navbar-nav {
+/* Botão de pesquisa no mobile */
+@media (max-width: 576px) {
+  .navbar-nav {
       flex-direction: column;
-    }
+  }
 
-    .form-control, .btn {
+  .form-control, .btn {
       width: 100%;
-    }
+  }
+}
+
+/* Responsivo: Navbar ocupa toda a tela */
+@media (max-width: 992px) {
+  .navbar-collapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro */
+      padding: 2rem;
+      z-index: 1050;
+      overflow-y: auto;
   }
 
-  /* Estilo adicional para o dropdown e outros links */
-  .dropdown-menu {
-    transition: all 0.3s ease;
-  }
-
-  .dropdown-menu:hover {
-    display: block;
-  }
-
-  /* Estilo para a barra de pesquisa no mobile */
-  @media (max-width: 576px) {
-    .navbar-nav {
+  .navbar-nav {
       flex-direction: column;
-    }
-
-    .form-control, .btn {
-      width: 100%;
-    }
+      align-items: flex-start;
+      gap: 1rem; /* Espaçamento entre os links */
   }
 
+  .nav-link {
+      color: #fff; /* Cor dos links no modo fullscreen */
+      font-size: 2rem; /* Aumentar tamanho da fonte */
+      padding: 0; /* Remover espaçamento lateral */
+  }
+
+  .nav-link:hover {
+      color: #ffc107;
+  }
+
+  .form-control, .btn {
+      width: 100%;
+  }
+
+  .btn-outline-light {
+      border-color: #ffc107;
+      color: #ffc107;
+  }
+
+  .btn-outline-light:hover {
+      background-color: #ffc107;
+      color: #000;
+  }
+}
+
+/* Botões */
 .btn-primary {
-    background-color: #b90000;
-    border: none;
-    font-size: 1.4rem;
-    padding: 10px 20px;
+  background-color: #b90000;
+  border: none;
+  font-size: 1.4rem;
+  padding: 10px 20px;
 }
 
 .btn-primary:hover {
-    background-color: #b90000;
-    font-size: 1.5rem;
+  background-color: #b90000;
+  font-size: 1.5rem;
 }
 
-.card-title{
-    font-size: 2.0rem;
+/* Outros estilos */
+.card-title {
+  font-size: 2rem;
 }
 
 footer a {
-    text-decoration: none;
-    font-size: 1.3rem;
+  text-decoration: none;
+  font-size: 1.3rem;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+#closeNavbar {
+  z-index: 1051;
+  cursor: pointer;
+}
+  /* Ocultando o botão-close por padrão */
+  #closeNavbar {
+    display: none;
+  }
+
+  /* Exibindo o botão-close apenas em telas com largura igual ou inferior a 991px */
+  @media (max-width: 991px) {
+    #closeNavbar {
+      display: block;
+    }
+  }
+
+/* Estilo da hero section */
+.hero {
+  position: relative;
+  height: 100vh; /* Altura total da seção */
+  background: url('/src/assets/img/equipe.png') no-repeat center center/cover;
+  background-position: center top; /* Posição inicial do fundo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Cor do texto contrastando com a imagem */
+  overflow: hidden;
+  will-change: background-position; /* Otimização para transições suaves */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Escurecimento da imagem */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Coloca o conteúdo acima do overlay */
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  font-size: 1.8rem;
+  background-color: #bb9f00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #ffb700;
+}

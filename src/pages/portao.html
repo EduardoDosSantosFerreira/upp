@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerca Elétrica - UPP Alarmes</title>
+    <title>Motores para Portão - UPP Alarmes</title>
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -33,7 +33,7 @@
         }
         .icon {
             font-size: 1.5rem;
-            color: #dfa300;
+            color: #ffa600;
             margin-right: 10px;
         }
         .list-item {
@@ -46,7 +46,7 @@
 </head>
 <body>
 
-<!-- Navbar -->
+    <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -88,60 +88,27 @@
       </div>
     </div>
 </nav>
-  
 
 <div class="container">
-    <!-- Seção: Como Funciona -->
+    <!-- Seção: Motores para Portão -->
     <section class="about-section">
         <h2 class="section-title text-center mb-4">
-            <i class="bi bi-lightning-fill icon"></i>Como Funciona?
+            <i class="bi bi-box-arrow-in-down icon"></i>Motores para Portão
         </h2>
         <p>
-            A cerca elétrica é um sistema de segurança ideal para muros e grades acima de **2 metros**. 
-            Ela proporciona uma **barreira física e psicológica**, inibindo tentativas de invasão.
+            <strong>Agilidade, conforto e praticidade!</strong> A UPP Alarmes oferece soluções inovadoras e práticas para automatizar os portões de sua residência ou empresa. Nossos motores são projetados para diferentes tipos de portões, garantindo funcionalidade e eficiência.
         </p>
-        <div class="list-item">
-            <i class="bi bi-shield-fill-check icon"></i>
-            <span><strong>Fios de aço inox:</strong> Resistentes, de alto brilho e sustentados por hastes de alumínio.</span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-bell-fill icon"></i>
-            <span><strong>Alarmes automáticos:</strong> Sirenes são disparadas ao toque ou rompimento dos fios.</span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-lightbulb-fill icon"></i>
-            <span><strong>Recursos opcionais:</strong> Pode acionar holofotes e discadoras telefônicas.</span>
-        </div>
-        <p>
-            Em caso de contato, o invasor recebe um **pulso de alta tensão** (entre 8.000 e 11.000 volts) de forma pulsativa a cada 1,2 segundos, sem causar danos fatais. Isso torna a cerca elétrica um dos sistemas mais eficientes de proteção perimetral.
-        </p>
-    </section>
 
-    <!-- Seção: Lembrete -->
-    <section class="reminder-section">
-        <h2 class="section-title text-center mb-4">
-            <i class="bi bi-exclamation-circle-fill icon"></i>Lembrete
-        </h2>
-        <div class="list-item">
-            <i class="bi bi-geo-alt-fill icon"></i>
-            <span>
-                A instalação deve ser feita em **muros ou alambrados** com mais de 2,5 metros de altura e **sem contato com vegetação**.
-            </span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-arrow-repeat icon"></i>
-            <span>
-                A cerca deve estar voltada para o interior da propriedade, respeitando os limites e evitando áreas públicas.
-            </span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-journal-text icon"></i>
-            <span>
-                Consulte as **regulamentações municipais** sobre o uso de cercas eletrificadas, pois algumas cidades podem possuir restrições específicas.
-            </span>
-        </div>
-        <p class="text-center mt-4">
-            Para garantir a segurança e eficiência, siga as orientações e consulte um profissional especializado na instalação do sistema.
+        <!-- Basculante -->
+        <h3 class="mt-4"><i class="bi bi-chevron-double-up icon"></i>Basculante</h3>
+        <p>
+            O portão basculante é ideal para quem deseja otimizar o espaço. Aberto, ele não ocupa as laterais do vão, pois sua folha fica em posição quase horizontal. Além disso, quando fechado, ele não toca o chão, reduzindo a corrosão.
+        </p>
+
+        <!-- Deslizante -->
+        <h3 class="mt-4"><i class="bi bi-arrows-move icon"></i>Deslizante</h3>
+        <p>
+            O portão deslizante opera por meio de um grupo moto-redutor e uma engrenagem que movimenta a régua de cremalheira presa ao portão. O motor reversível permite abrir e fechar com agilidade e segurança, atendendo a diversas necessidades.
         </p>
     </section>
 </div>
@@ -181,35 +148,8 @@
   <!-- Scripts -->
   <script src="../assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="../assets/js/aos.js"></script>
-  
-  <!-- Pesquisar Navbar -->
-  <script>
-    function pesquisar(event) {
-      event.preventDefault();
-      const termo = document.getElementById('termoPesquisa').value.toLowerCase();
-      
-      const mapeamento = {
-        'camera': '#cameras',
-        'câmera': '#cameras',
-        'cameras': '#cameras',
-        'câmeras': '#cameras',
-        'monitoramento': '#monitoramento',
-        'cerca': '#cerca',
-        'cerca elétrica': '#cerca',
-        'cerca eletrica': '#cerca'
-      };
-  
-      if (mapeamento[termo]) {
-        document.querySelector(mapeamento[termo]).scrollIntoView({ behavior: 'smooth' });
-        return false;
-      } else {
-        alert('Termo não encontrado. Tente pesquisar por: câmeras, monitoramento ou cerca elétrica');
-      }
-      return false;
-    }
-  </script>
 
-  <!-- Close da navbar -->
+    <!-- Close da navbar -->
 <script>
     document.getElementById("closeNavbar").addEventListener("click", () => {
     const navbarCollapse = document.querySelector(".fullscreen-navbar");

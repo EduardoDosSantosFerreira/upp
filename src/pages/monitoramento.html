@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerca Elétrica - UPP Alarmes</title>
+    <title>Monitoramento 24H - UPP Alarmes</title>
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -25,7 +25,7 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
-        .about-section, .reminder-section {
+        .about-section, .benefits-section {
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -33,7 +33,7 @@
         }
         .icon {
             font-size: 1.5rem;
-            color: #dfa300;
+            color: #ffa600;
             margin-right: 10px;
         }
         .list-item {
@@ -88,61 +88,62 @@
       </div>
     </div>
 </nav>
-  
 
 <div class="container">
-    <!-- Seção: Como Funciona -->
+    <!-- Seção: Monitoramento 24H -->
     <section class="about-section">
         <h2 class="section-title text-center mb-4">
-            <i class="bi bi-lightning-fill icon"></i>Como Funciona?
+            <i class="bi bi-clock-fill icon"></i>Monitoramento 24H
         </h2>
         <p>
-            A cerca elétrica é um sistema de segurança ideal para muros e grades acima de **2 metros**. 
-            Ela proporciona uma **barreira física e psicológica**, inibindo tentativas de invasão.
+            <strong>24 horas sem descanso!</strong> Com os sistemas de alarme da UPP Alarmes, você e sua família podem focar nas coisas boas da vida, com toda a segurança e confiabilidade que merecem. 
         </p>
-        <div class="list-item">
-            <i class="bi bi-shield-fill-check icon"></i>
-            <span><strong>Fios de aço inox:</strong> Resistentes, de alto brilho e sustentados por hastes de alumínio.</span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-bell-fill icon"></i>
-            <span><strong>Alarmes automáticos:</strong> Sirenes são disparadas ao toque ou rompimento dos fios.</span>
-        </div>
-        <div class="list-item">
-            <i class="bi bi-lightbulb-fill icon"></i>
-            <span><strong>Recursos opcionais:</strong> Pode acionar holofotes e discadoras telefônicas.</span>
-        </div>
         <p>
-            Em caso de contato, o invasor recebe um **pulso de alta tensão** (entre 8.000 e 11.000 volts) de forma pulsativa a cada 1,2 segundos, sem causar danos fatais. Isso torna a cerca elétrica um dos sistemas mais eficientes de proteção perimetral.
+            Nossos sistemas oferecem opções com ou sem fio, garantindo conforto e praticidade. Podem ser utilizados em redes elétricas de 110V e 220V, com bateria de emergência para funcionamento mesmo na falta de energia elétrica.
         </p>
+        <p>
+            Em caso de eventos, o sistema emite um sinal sonoro no local e um sinal silencioso para a nossa Central de Monitoramento 24 horas. Este sinal notifica os operadores sobre o tipo de evento e o local exato, permitindo que medidas cabíveis sejam tomadas, como:
+        </p>
+        <ul>
+            <li>Contactar o cliente.</li>
+            <li>Acionar a polícia ou os bombeiros.</li>
+            <li>Seguir a lista de contatos fornecida pelo cliente.</li>
+        </ul>
     </section>
 
-    <!-- Seção: Lembrete -->
-    <section class="reminder-section">
+    <!-- Seção: Benefícios -->
+    <section class="benefits-section">
         <h2 class="section-title text-center mb-4">
-            <i class="bi bi-exclamation-circle-fill icon"></i>Lembrete
+            <i class="bi bi-check-circle-fill icon"></i>Principais Benefícios
         </h2>
         <div class="list-item">
-            <i class="bi bi-geo-alt-fill icon"></i>
-            <span>
-                A instalação deve ser feita em **muros ou alambrados** com mais de 2,5 metros de altura e **sem contato com vegetação**.
-            </span>
+            <i class="bi bi-gear-fill icon"></i>
+            <span>Sistema totalmente programável.</span>
         </div>
         <div class="list-item">
-            <i class="bi bi-arrow-repeat icon"></i>
-            <span>
-                A cerca deve estar voltada para o interior da propriedade, respeitando os limites e evitando áreas públicas.
-            </span>
+            <i class="bi bi-volume-up-fill icon"></i>
+            <span>Tempo de sirene programável.</span>
         </div>
         <div class="list-item">
-            <i class="bi bi-journal-text icon"></i>
-            <span>
-                Consulte as **regulamentações municipais** sobre o uso de cercas eletrificadas, pois algumas cidades podem possuir restrições específicas.
-            </span>
+            <i class="bi bi-broadcast-pin icon"></i>
+            <span>Pânico imediato, silencioso ou não, via controle remoto.</span>
         </div>
-        <p class="text-center mt-4">
-            Para garantir a segurança e eficiência, siga as orientações e consulte um profissional especializado na instalação do sistema.
-        </p>
+        <div class="list-item">
+            <i class="bi bi-sliders icon"></i>
+            <span>Desativação de um ou mais sensores temporariamente (bypass).</span>
+        </div>
+        <div class="list-item">
+            <i class="bi bi-battery-charging icon"></i>
+            <span>Carregador de baterias automático.</span>
+        </div>
+        <div class="list-item">
+            <i class="bi bi-telephone icon"></i>
+            <span>Discador telefônico incorporado.</span>
+        </div>
+        <div class="list-item">
+            <i class="bi bi-clock-history icon"></i>
+            <span>Programação 24 horas para qualquer setor.</span>
+        </div>
     </section>
 </div>
 
@@ -181,35 +182,8 @@
   <!-- Scripts -->
   <script src="../assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="../assets/js/aos.js"></script>
-  
-  <!-- Pesquisar Navbar -->
-  <script>
-    function pesquisar(event) {
-      event.preventDefault();
-      const termo = document.getElementById('termoPesquisa').value.toLowerCase();
-      
-      const mapeamento = {
-        'camera': '#cameras',
-        'câmera': '#cameras',
-        'cameras': '#cameras',
-        'câmeras': '#cameras',
-        'monitoramento': '#monitoramento',
-        'cerca': '#cerca',
-        'cerca elétrica': '#cerca',
-        'cerca eletrica': '#cerca'
-      };
-  
-      if (mapeamento[termo]) {
-        document.querySelector(mapeamento[termo]).scrollIntoView({ behavior: 'smooth' });
-        return false;
-      } else {
-        alert('Termo não encontrado. Tente pesquisar por: câmeras, monitoramento ou cerca elétrica');
-      }
-      return false;
-    }
-  </script>
 
-  <!-- Close da navbar -->
+    <!-- Close da navbar -->
 <script>
     document.getElementById("closeNavbar").addEventListener("click", () => {
     const navbarCollapse = document.querySelector(".fullscreen-navbar");
