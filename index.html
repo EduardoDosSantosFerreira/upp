@@ -111,6 +111,188 @@
     </div>
 
     <hr class="my-5">
+
+
+
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Botão esquerdo -->
+        <div class="col-1 text-center">
+          <span class="arrow-btn fs-3" id="prevBtn">❮</span>
+        </div>
+        <!-- Conteúdo principal -->
+        <div class="col-10">
+          <div class="carousel-main text-center">
+            <img id="mainImage" src="src/assets/img/carrosel/1.jpg" alt="Imagem Principal">
+            <div class="carousel-info mt-4">
+              <h3 id="mainTitle">Com Áreas Externas</h3>
+              <p id="mainDescription">Segurança completa para residências com grandes áreas externas.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Botão direito -->
+        <div class="col-1 text-center">
+          <span class="arrow-btn fs-3" id="nextBtn">❯</span>
+        </div>
+      </div>
+  
+      <!-- Navegação inferior -->
+      <div class="carousel-nav d-flex justify-content-center mt-4">
+        <img src="src/assets/img/carrosel/1.jpg" alt="Com Áreas Externas" data-index="0" class="active mx-2">
+        <img src="src/assets/img/carrosel/2.webp" alt="Apartamentos" data-index="1" class="mx-2">
+        <img src="src/assets/img/carrosel/3.jpg" alt="Segunda Casa" data-index="2" class="mx-2">
+        <img src="src/assets/img/carrosel/4.jpg" alt="Aluguel" data-index="3" class="mx-2">
+        <img src="src/assets/img/carrosel/5.webp" alt="Animais Domésticos" data-index="4" class="mx-2">
+        <img src="src/assets/img/carrosel/6.jpg" alt="Crianças Pequenas" data-index="5" class="mx-2">
+        <img src="src/assets/img/carrosel/7.webp" alt="Crianças Adolescentes" data-index="6" class="mx-2">
+      </div>
+    </div>
+  
+    <script>
+      // Dados do carrossel
+      const carouselData = [
+        {
+          image: "src/assets/img/carrosel/1.jpg",
+          title: "Com Áreas Externas",
+          description: "Segurança completa para residências com grandes áreas externas."
+        },
+        {
+          image: "src/assets/img/carrosel/2.webp",
+          title: "Apartamentos",
+          description: "Proteção reforçada na porta da frente. Detectores avançados para janelas."
+        },
+        {
+          image: "src/assets/img/carrosel/3.jpg",
+          title: "Segunda Casa",
+          description: "Monitoramento remoto para maior tranquilidade em sua segunda residência."
+        },
+        {
+          image: "src/assets/img/carrosel/4.jpg",
+          title: "Aluguel",
+          description: "Segurança eficiente para imóveis alugados, sem complicações."
+        },
+        {
+          image: "src/assets/img/carrosel/5.webp",
+          title: "Animais Domésticos",
+          description: "Soluções para proteger seu lar sem comprometer o conforto dos pets."
+        },
+        {
+          image: "src/assets/img/carrosel/6.jpg",
+          title: "Crianças Pequenas",
+          description: "Tecnologia para proteger os mais pequenos em ambientes domésticos."
+        },
+        {
+          image: "src/assets/img/carrosel/7.webp",
+          title: "Crianças Adolescentes",
+          description: "Proteção adaptada para o dia a dia de adolescentes."
+        }
+      ];
+  
+      const mainImage = document.getElementById("mainImage");
+      const mainTitle = document.getElementById("mainTitle");
+      const mainDescription = document.getElementById("mainDescription");
+      const thumbnails = document.querySelectorAll(".carousel-nav img");
+  
+      let currentIndex = 0;
+  
+      // Função para atualizar o carrossel
+      function updateCarousel(index) {
+        const data = carouselData[index];
+        mainImage.src = data.image;
+        mainTitle.textContent = data.title;
+        mainDescription.textContent = data.description;
+  
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === index);
+        });
+      }
+  
+      // Navegação pelos botões
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + carouselData.length) % carouselData.length;
+        updateCarousel(currentIndex);
+      });
+  
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % carouselData.length;
+        updateCarousel(currentIndex);
+      });
+  
+      // Navegação pelas miniaturas
+      thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener("click", () => {
+          currentIndex = index;
+          updateCarousel(currentIndex);
+        });
+      });
+    </script>
+
+
+
+<style>
+  /* Ajuste para imagens principais */
+  .carousel-main img {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  /* Navegação inferior */
+  .carousel-nav img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, border 0.3s;
+  }
+
+  .carousel-nav img.active {
+    border: 3px solid #ff0055;
+    transform: scale(1.1);
+  }
+
+  .carousel-nav img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Ajustes gerais */
+  .carousel-info h3 {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .carousel-info p {
+    color: #555;
+  }
+
+  .arrow-btn {
+    color: #ff0055;
+    cursor: pointer;
+  }
+
+  .arrow-btn:hover {
+    color: #ff3377;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <br>
     <br>
     <br>
