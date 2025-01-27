@@ -1,0 +1,33 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.about-section, .reminder-section {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.icon {
+    font-size: 1.5rem;
+    color: #ffa600;
+    margin-right: 10px;
+}
+.list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
