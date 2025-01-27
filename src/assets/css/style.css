@@ -12,13 +12,6 @@ body {
   color: #333;
 }
 
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
 .section-title {
   color: #333;
   font-weight: 600;
